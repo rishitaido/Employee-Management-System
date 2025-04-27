@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.EmployeeController">
+    <children>
+        <VBox spacing="10" layoutX="20" layoutY="20">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label fx:id="empIdLabel" text="ID:" />
+            <Label fx:id="firstNameLabel" text="First Name:" />
+            <Label fx:id="lastNameLabel" text="Last Name:" />
+            <Label fx:id="emailLabel" text="Email:" />
+            <Label fx:id="hireDateLabel" text="Hire Date:" />
+            <Label fx:id="salaryLabel" text="Salary:" />
+            <Label fx:id="ssnLabel" text="SSN:" />
+            <Button text="Exit" onAction="#handleExit" />
+        </VBox>
+    </children>
+</AnchorPane>

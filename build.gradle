@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.example.MainApp'
+    applicationDefaultJvmArgs = [
+        '-Dprism.order=sw',
+        '-Djavafx.embed.singleThread=true'
+    ]
+}
+
+javafx {
+    version = "21.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+dependencies {
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
+}
