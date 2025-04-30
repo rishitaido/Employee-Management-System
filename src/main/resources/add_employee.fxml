@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.AddEmployeeController">
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <Label text="Add New Employee" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="fnameField" promptText="First Name" />
+    <TextField fx:id="lnameField" promptText="Last Name" />
+    <TextField fx:id="emailField" promptText="Email" />
+    <TextField fx:id="ssnField" promptText="SSN (last 4)" />
+    <TextField fx:id="hireDateField" promptText="Hire Date (YYYY-MM-DD)" />
+    <TextField fx:id="salaryField" promptText="Salary" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Save" onAction="#handleSave" />
+        <Button text="Cancel" onAction="#handleCancel" />
+    </HBox>
+</VBox>

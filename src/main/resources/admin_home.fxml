@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.AdminController">
+
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Add Employee" onAction="#handleAddEmployee"/>
+            <Button text="Update Salary" onAction="#handleUpdateSalary"/>
+            <Button text="Reports" onAction="#handleReports"/>
+            <Button text="Logout" onAction="#handleLogout"/>
+            <TextField fx:id="searchField" promptText="Search by Name, SSN, ID" />
+            <Button text="Search" onAction="#handleSearch"/>
+        </HBox>
+    </top>
+
+    <center>
+    <TableView fx:id="employeeTable">
+        <columns>
+            <TableColumn fx:id="idCol" text="ID" prefWidth="60">
+                <cellValueFactory>
+                    <PropertyValueFactory property="empid"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fnameCol" text="First Name" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fname"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="lnameCol" text="Last Name" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lname"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="emailCol" text="Email" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="hireDateCol" text="Hire Date" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="hireDate"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="salaryCol" text="Salary" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="salary"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</center>
+
+</BorderPane>

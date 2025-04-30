@@ -23,9 +23,13 @@ public class LoginController {
 
         try {
             if (email.equals("admin") && input.equals("password")) {
-                showAlert("Admin login successful (CRUD screen coming soon)");
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/admin_home.fxml"));
+                Scene adminScene = new Scene(loader.load());
+            
+                Stage stage = (Stage) emailField.getScene().getWindow();
+                stage.setScene(adminScene);
                 return;
-            }
+            }            
 
             Connection conn = DBUtil.getConnection();
             String sql = "SELECT * FROM employees WHERE email = ? AND SSN = ?";
