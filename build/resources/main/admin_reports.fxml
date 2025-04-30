@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
 
-<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-    <Label text="Reports Screen (Coming Soon)" />
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ReportsController" spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" bottom="20" left="20" right="20"/>
+    </padding>
+
+    <Label text="Reports" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <ComboBox fx:id="reportTypeBox" promptText="Select Report" />
+
+    <Button text="Generate" onAction="#handleGenerate"/>
+
+    <ListView fx:id="reportTable" prefHeight="300"/>
+
     <Button text="Back" onAction="#handleBack"/>
 </VBox>

@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-    <Label text="Update Salary Screen (Coming Soon)" />
-    <Button text="Back" onAction="#handleBack"/>
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.UpdateSalaryController">
+
+    <padding>
+        <Insets top="20" bottom="20" left="20" right="20"/>
+    </padding>
+
+    <Label text="Update Salary for Range" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="minSalaryField" promptText="Minimum Salary" />
+    <TextField fx:id="maxSalaryField" promptText="Maximum Salary" />
+    <TextField fx:id="percentField" promptText="Increase Percent (e.g., 3.2)" />
+
+    <HBox spacing="10">
+        <Button text="Apply Update" onAction="#handleUpdate"/>
+        <Button text="Cancel" onAction="#handleCancel"/>
+    </HBox>
 </VBox>
